@@ -6,7 +6,7 @@
 /*   By: sbrynn <sbrynn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 18:14:01 by sbrynn            #+#    #+#             */
-/*   Updated: 2020/09/13 17:15:27 by sbrynn           ###   ########.fr       */
+/*   Updated: 2020/09/18 14:48:41 by sbrynn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@ void	free_read(t_read *head)
 {
 	free_rooms(head->rooms);
 	free_cnct(head->conect);
-	free((head->start_name));
-	free((head->end_name));
-	free((head->line));
-	free(head->global_line);
+	if (head->start_name)
+		free(head->start_name);
+	if (head->end_name)
+		free(head->end_name);
+	// if (head->line)
+	// 	free(head->line);
+	if (head->global_line)
+		free(head->global_line);
 	free(head);
 }
 

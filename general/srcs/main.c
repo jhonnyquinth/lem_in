@@ -6,7 +6,7 @@
 /*   By: sbrynn <sbrynn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:15:11 by sdagger           #+#    #+#             */
-/*   Updated: 2020/09/12 23:41:15 by sdagger          ###   ########.fr       */
+/*   Updated: 2020/09/18 14:44:28 by sbrynn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		main(int ac, char **av)
 	run_ants(lem);
 	execute_flags_after(lem);
 	free_lem(lem);
+	free_read(reader);
 	exit(0);
 	return (0);
 }
