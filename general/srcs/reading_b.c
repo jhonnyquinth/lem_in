@@ -20,8 +20,6 @@ void	free_read(t_read *head)
 		free(head->start_name);
 	if (head->end_name)
 		free(head->end_name);
-	// if (head->line)
-	// 	free(head->line);
 	if (head->global_line)
 		free(head->global_line);
 	free(head);

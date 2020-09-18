@@ -20,7 +20,7 @@ void	first_solve(t_lem *lem)
 	bellman_ford(lem);
 	if (!(lem->graph->nodes->array[lem->graph->end]->prev))
 		error_f("There is no path", 0);
-	make_paths(lem, 0);
+	make_paths(lem);
 	if (ft_lstsize(lem->paths->content) > 1)
 		dublicate_nodes(lem);
 	reverse_list((t_list **)&(lem->paths->content));

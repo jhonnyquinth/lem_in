@@ -6,7 +6,7 @@
 /*   By: sdagger <sdagger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 14:56:47 by sdagger           #+#    #+#             */
-/*   Updated: 2020/09/12 23:26:20 by sdagger          ###   ########.fr       */
+/*   Updated: 2020/09/18 16:46:30 by sdagger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void		free_graph(t_graph **graph)
 	if ((*graph))
 	{
 		if ((*graph)->nodes)
-			free_d_arr(&((*graph)->nodes), 1);
+			free_d_arr(&((*graph)->nodes));
 		free((*graph));
 		(*graph) = NULL;
 	}
@@ -53,6 +53,7 @@ static void		free_graph(t_graph **graph)
 
 void			free_paths(void *path_void, size_t size)
 {
+	size += 0;
 	ft_lstdel((t_list **)&path_void, &del_edge);
 }
 

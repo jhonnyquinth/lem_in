@@ -6,7 +6,7 @@
 /*   By: sbrynn <sbrynn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 15:54:52 by sdagger           #+#    #+#             */
-/*   Updated: 2020/09/13 14:05:48 by sbrynn           ###   ########.fr       */
+/*   Updated: 2020/09/18 17:02:10 by sdagger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,13 +119,13 @@ void				cpy_array(t_node **dest, t_node **src,
 					int freeornot, int len);
 int					add_darr(t_dynamicarr **arr, t_node *value);
 void				print_darr(t_dynamicarr *arr);
-void				free_d_arr(t_dynamicarr **arr, int free_neight);
+void				free_d_arr(t_dynamicarr **arr);
 
 /*
 ** nodes
 */
 
-void				free_nodes(t_node **arr, int free_neight);
+void				free_nodes(t_node **arr);
 t_node				*new_node(const char *name, const char *x, const char *y);
 void				free_node(t_node **node_to_del);
 t_node				*new_node_conv(const char *name, int x, int y);
@@ -148,7 +148,7 @@ void				solve(t_lem *lem);
 int					bellman_ford(t_lem *lem);
 void				set_in_way(t_lem *lem);
 void				dublicate_nodes(t_lem *lem);
-void				make_paths(t_lem *lem, int suurbale);
+void				make_paths(t_lem *lem);
 void				make_new_paths(t_lem *lem);
 void				make_paths_many(t_lem *lem);
 

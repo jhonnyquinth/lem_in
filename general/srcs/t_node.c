@@ -44,7 +44,7 @@ void	free_node(t_node **node_to_del)
 	*node_to_del = NULL;
 }
 
-void	free_nodes(t_node **arr, int free_neight)
+void	free_nodes(t_node **arr)
 {
 	int	i;
 
